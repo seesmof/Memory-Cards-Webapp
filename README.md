@@ -19,7 +19,9 @@
 
 ## About
 
-This card game provides an engaging and challenging experience for players. It tests their memory and concentration skills as they try to match pairs of cards. Enjoy playing and have fun! Made with React, TailwindCSS and Vite. Fully functional, fully responsive.
+This card game provides an engaging and challenging experience for players. It tests their memory and concentration skills as they try to match pairs of cards. Enjoy playing and have fun!
+
+Made with React, TailwindCSS and Vite. Fully functional, fully responsive.
 
 ## Screenshots
 
