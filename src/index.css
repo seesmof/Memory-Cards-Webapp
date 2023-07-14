@@ -4,6 +4,6 @@
 
 @layer components {
   .card {
-    @apply shadow-md aspect-square rounded-xl p-4 cursor-pointer duration-300 hover:-rotate-2 hover:scale-95;
+    @apply shadow-md aspect-square rounded-xl p-32 cursor-pointer duration-300 hover:-rotate-2 hover:scale-95;
   }
 }

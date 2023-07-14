@@ -27,15 +27,36 @@ const Card = ({ color }) => {
 };
 
 const Board = () => {
+  const [gameBoard, setGameBoard] = React.useState([]);
+
+  const generateBoard = () => {
+    const colors = Object.keys(COLORS);
+    const board = [];
+
+    for (let i = 0; i < colors.length / 2; i++) {
+      board.push(colors[i]);
+      board.push(colors[i]);
+    }
+
+    // Shuffle the board array
+    for (let i = board.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [board[i], board[j]] = [board[j], board[i]];
+    }
+
+    setGameBoard(board);
+  };
+
+  React.useEffect(() => {
+    generateBoard();
+  }, []);
+
   return (
     <>
-      <div className="grid grid-cols-3 grid-rows-2 gap-4">
-        <Card color="green" />
-        <Card color="red" />
-        <Card color="yellow" />
-        <Card color="purple" />
-        <Card color="orange" />
-        <Card color="blue" />
+      <div className="flex flex-row flex-wrap gap-4">
+        {gameBoard.map((color, index) => {
+          return <Card key={index} color={color} />;
+        })}
       </div>
     </>
   );
