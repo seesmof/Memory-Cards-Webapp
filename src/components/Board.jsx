@@ -9,25 +9,29 @@ const COLORS = {
   purple: "bg-purple-500",
 };
 
-const Card = ({ color }) => {
-  const [isFlipped, setIsFlipped] = React.useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  return (
-    <>
-      <button
-        className={`card ${isFlipped ? COLORS[color] : "bg-neutral-200"}`}
-        onClick={handleFlip}
-      ></button>
-    </>
-  );
-};
-
 const Board = () => {
   const [gameBoard, setGameBoard] = React.useState([]);
+  const [clicks, setClicks] = React.useState(0);
+  const [matched, setMatched] = React.useState(0);
+  const [won, setWon] = React.useState(false);
+
+  const Card = ({ color }) => {
+    const [isFlipped, setIsFlipped] = React.useState(false);
+
+    const handleFlip = () => {
+      setIsFlipped(!isFlipped);
+      setClicks(clicks + 1);
+    };
+
+    return (
+      <>
+        <button
+          className={`card ${isFlipped ? COLORS[color] : "bg-neutral-200"}`}
+          onClick={handleFlip}
+        ></button>
+      </>
+    );
+  };
 
   const generateBoard = () => {
     const colors = Object.keys(COLORS);
@@ -45,15 +49,18 @@ const Board = () => {
     }
 
     setGameBoard(board);
+    console.log(board);
   };
 
   React.useEffect(() => {
     generateBoard();
   }, []);
 
+  React.useEffect(() => {}, [clicks]);
+
   return (
     <>
-      <div className="flex flex-row flex-wrap gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {gameBoard.map((color, index) => {
           return <Card key={index} color={color} />;
         })}
