@@ -19,7 +19,7 @@
 
 ## About
 
-This repository contains a card game that consist of a stack of cards with each one hidden at the very beginning with duplicate pairs for each kind of card. When user flips a card he can see it for one turn, but then after they flip another card, if those two do not match, they get hidden. Made with React, TailwindCSS and Vite. Fully functional, fully responsive.
+This card game provides an engaging and challenging experience for players. It tests their memory and concentration skills as they try to match pairs of cards. Enjoy playing and have fun! Made with React, TailwindCSS and Vite. Fully functional, fully responsive.
 
 ## Screenshots
 
