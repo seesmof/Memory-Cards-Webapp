@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
   return (
     <>
-      <div className="">Cards!</div>
+      <div className="flex">Cards!</div>
     </>
   );
 }
