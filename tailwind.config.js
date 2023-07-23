@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        offwhite: "#F5F5F5",
+        background: "#e5e5e5",
       },
     },
   },
