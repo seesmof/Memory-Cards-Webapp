@@ -6,3 +6,9 @@
 ### “For God so loved the world, that He gave His only begotten Son (Jesus), that whoever believes in Him shall not perish, but have eternal life. (John 3:16)
 ### that if you confess with your mouth Jesus as Lord, and believe in your heart that God raised Him from the dead, you will be saved; (Rom 10:9)
 ### for “Everyone who calls on the Name of the Lord (Jesus) will be saved.” (Rom 10:13)
+
+Vite logo is taken from [Vite](https://vite.dev/), their copyirght statement:
+
+> Released under the MIT License. (335e2155)
+> 
+> Copyright © 2019-present VoidZero Inc. & Vite Contributors
